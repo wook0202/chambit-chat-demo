@@ -716,34 +716,29 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   margin-bottom: 32px;
   color: #4E5968;
 }
+
 .stats-wrapper {
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255,255,255,0.9);
-  border-radius: 24px;
-  padding: 8px;
-  box-shadow: 0 16px 32px rgba(0,0,0,0.06);
   display: flex;
-  margin: 40px auto;
-  max-width: 480px;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.95);
+  border-radius: 999px;
+  padding: 13px 28px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  margin: 36px auto;
+  font-size: 15px;
+  font-weight: 600;
+  color: #4E5968;
 }
-.stat { flex:1; padding:16px 8px; position:relative; 
-  display: flex;           /* Flexbox 레이아웃 활성화 */
-  flex-direction: column;  /* 제목과 내용을 위아래로 배치 */
-  align-items: center;     /* 가로(수평) 방향 정중앙 정렬 */
-  justify-content: center; /* 세로(수직) 방향 정중앙 정렬 */
-  text-align: center;
-}
-.stat:not(:last-child)::after {
-  content:''; position:absolute;
-  right:0; top:20%; height:60%; width:1px;
-  background:rgba(0,0,0,0.05);
-}
-.stat-n { font-size:24px; font-weight:800; color:#191F28; display:block; margin-bottom:4px; line-height: 1.2; }
-.stat-l { font-size:13px; color:#4E5968; font-weight:600; line-height: 1.2; }
+.stat-items { color: #191F28; font-weight: 700; }
+.stat-none  { color: #3182F6; font-weight: 800; }
 
 .btn-hero-new {
+  margin-top: 60px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1109,6 +1104,30 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 
 .ui-mock--img::before { content: ''; }
 
+/* ── 페이지 스크롤 안내 ── */
+@keyframes scrollBounce {
+  0%, 100% { transform:  translateY(0); opacity: 0.7; }
+  50%       { transform:  translateY(8px); opacity: 1; }
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 110px;
+  left: 36%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: scrollBounce 1.6s ease-in-out infinite;
+  z-index: 20;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(0,0,0,0.7);
+  letter-spacing: 0.08em;
+}
+@media (max-width: 860px) {
+  .scroll-indicator { display: none; }
+}
+
 </style>
 </head>
 <body style="">
@@ -1154,14 +1173,22 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     <p class="hero-sub-new">복잡한 설명 대신 <br>우리 학원만의 활용법을 직접 확인해 보세요.</p>
 
     <div class="stats-wrapper">
-      <div class="stat"><span class="stat-n">가맹비</span><span class="stat-l">없음</span></div>
-      <div class="stat"><span class="stat-n">약정기간</span><span class="stat-l">없음</span></div>
-      <div class="stat"><span class="stat-n">위약금</span><span class="stat-l">없음</span></div>
-    </div>
+  <span class="stat-items">가맹비 · 약정기간 · 위약금</span>
+  <span class="stat-none">없음</span>
+</div>
 
     <button class="btn-hero-new" id="heroCtaBtn"> 무료체험 바로가기</button>
   </div>
 </section>
+
+
+ <!-- 스크롤 유도 표시 -->
+  <div class="scroll-indicator">
+    <span>SCROLL</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.7)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </div>
 
 <!-- ══ 맞춤 활용 시나리오 ══ -->
 <section class="scenario-sec">
@@ -1289,7 +1316,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
         <div class="sc-step-header" style="border-color:#FF6B00;">
           <div>
             <div class="sc-step-title">숙제 구성</div>
-            <div class="sc-step-sub">집에서 스스로 완료하는 4가지 숙제</div>
+            <div class="sc-step-sub">집에서 스스로 완료하는 숙제</div>
           </div>
         </div>
 
@@ -1420,6 +1447,30 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
           <img src="storyfrom-books.png" alt="참빛북클럽 어린이 영어작가들이 만든 작품" style="width:100%;max-width:340px;border-radius:10px;display:block;margin:0 auto;" />
 
           </div>
+
+          <div class="sc-feature-card">
+          <div>
+            <div class="sc-feat-num">3</div>
+            <div class="sc-feat-title">책 읽기 + 3rd Reading 녹음 제출</div>
+            <div class="sc-feat-desc">집에서 오늘 배운 책을 3rd Reading까지 완료하고 녹음을 남겨요. 원어민 음성 없이 스스로 읽으며 녹음하는 것이 목표예요. 읽기가 아직 익숙하지 않다면 원어민 음성을 틀어 놓고 따라 읽어도 좋아요.</div>
+          </div>
+          <div class="ui-mock">
+            <div style="font-size:10px;font-weight:700;color:#8B95A1;margin-bottom:8px;">🎙 녹음 기능</div>
+            <div class="ui-rec-bar">
+              <div class="ui-rec-icon"><span style="color:#fff;font-size:12px;">●</span></div>
+              <div class="ui-rec-wave">
+                <span style="height:6px"></span><span style="height:12px"></span><span style="height:16px"></span><span style="height:10px"></span><span style="height:14px"></span><span style="height:8px"></span><span style="height:12px"></span><span style="height:6px"></span>
+              </div>
+              <div style="font-size:10px;color:#8B95A1;">00:12</div>
+            </div>
+            <div class="ui-btn-row">
+              <div class="ui-btn ui-btn-orange">🎧 다시 듣기</div>
+              <div class="ui-btn ui-btn-blue">✓ 제출</div>
+            </div>
+          </div>
+        </div>
+
+
         </div>
       </div>
     </div>
@@ -1470,7 +1521,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 
     <div class="faq-item" id="faq-3">
       <button class="faq-question" onclick="toggleFaq(3)">
-       밸도로 프로그램을 설치 해야 하나요?
+       별도로 프로그램을 설치 해야 하나요?
         <span class="faq-chevron"><svg viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg"><path d="M5 7L0 0h10z"></path></svg></span>
       </button>
       <div class="faq-answer">
