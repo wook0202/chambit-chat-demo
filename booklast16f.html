@@ -1336,7 +1336,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 
 
  <!-- 스크롤 유도 표시 -->
-  <div class="scroll-indicator" id="scrollIndicator" onclick="window.scrollBy({ top: window.innerHeight, behavior: &#39;smooth&#39; })">
+  <div class="scroll-indicator" id="scrollIndicator" onclick="window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M6 9L12 15L18 9" stroke="#1a1a2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
     </svg>
@@ -1351,11 +1351,12 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     </div>
 
    <div class="scenario-tabs">
-      <div class="scenario-tab on" data-type="class" onclick="setScenario( &#39;sc-class&#39;, this)">📖 수업용</div>
-      <div class="scenario-tab" data-type="hw" onclick="setScenario( &#39;sc-hw&#39;,   this)">✏️ 숙제용</div>
-      <div class="scenario-tab" data-type="lab" onclick="setScenario( &#39;sc-lab&#39;,  this)">🖥️ Lab실용</div>
+      <div class="scenario-tab on" data-type="class" onclick="setScenario( 'sc-class', this)">📖 수업용</div>
+      <div class="scenario-tab" data-type="hw" onclick="setScenario( 'sc-hw',   this)">✏️ 숙제용</div>
+      <div class="scenario-tab" data-type="lab" onclick="setScenario( 'sc-lab',  this)">🖥️ Lab실용</div>
     </div>
     
+
     <!-- ══════════ 수업용 ══════════ -->
     <div id="sc-class" class="scenario-panel show">
       <div class="sc-feature-rows">
@@ -1372,7 +1373,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
           </div>
           <div>
             <div class="sc-preview-card sc-preview-card--no-label preview-card-img">
-              <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_3913101e-b674-4a61-ab6c-b703ff194e7f/outputs/img_word.jpg" alt="Word List 화면 예시">
+              <img src="img_word.jpg" alt="Word List 화면 예시">
             </div>
           </div>
         </div>
@@ -1383,7 +1384,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
         <div class="sc-feature-row">
           <div>
             <div class="sc-preview-card sc-preview-card--no-label sc-preview-card--fill">
-            <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_3913101e-b674-4a61-ab6c-b703ff194e7f/outputs/learn.png" alt="While Reading 화면 예시">
+            <img src="learn.png" alt="While Reading 화면 예시">
            </div>
           </div>
           <div class="sc-feature-text">
@@ -1410,7 +1411,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
           </div>
           <div>
           <div class="sc-preview-card sc-preview-card--no-label sc-preview-card--fill">
-         <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_3913101e-b674-4a61-ab6c-b703ff194e7f/outputs/selfbook.png" alt="After Reading 화면 예시">
+         <img src="selfbook.png" alt="After Reading 화면 예시">
          </div>
           </div>
         </div>
@@ -1454,7 +1455,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 <div class="sc-feature-row">
   <div>
     <div class="sc-preview-card sc-preview-card--no-label preview-card-img">
-      <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_3913101e-b674-4a61-ab6c-b703ff194e7f/outputs/translation_sample.png" alt="영작훈련 화면 예시">
+      <img src="translation_sample.png" alt="영작훈련 화면 예시">
     </div>
   </div>
   <div class="sc-feature-text">
@@ -1478,7 +1479,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     <p class="sc-feature-body">영어책 필사를 통해 영어 문장을 암기하게 해주세요. 아이들이 책 1권을 필사하면 1번의 성취감을 느끼며 2권, 3권을 써보면서 점점 더 성취감을 느끼게 됩니다. 학생들이 오랫동안 꾸준히 스스로 할 수 있는 학습법이에요.</p>
   </div>
   <div class="sc-preview-card sc-preview-card--no-label sc-preview-card--fill">
-    <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_3913101e-b674-4a61-ab6c-b703ff194e7f/outputs/copy_sample.png" alt="필사훈련 화면 예시">
+    <img src="copy_sample.png" alt="필사훈련 화면 예시">
   </div>
 </div>
 
@@ -1499,7 +1500,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
           </div>
 
           <div class="sc-preview-card sc-preview-card--no-label sc-preview-card--fill">
-          <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_3913101e-b674-4a61-ab6c-b703ff194e7f/outputs/bookplay_1.png" alt="LEARNING 학습 화면 예시">
+          <img src="bookplay_1.png" alt="LEARNING 학습 화면 예시">
           </div>
 
         </div>
@@ -1547,7 +1548,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
           <div>
 
             <div class="sc-preview-card sc-preview-card--no-label sc-preview-card--fill">
-            <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_3913101e-b674-4a61-ab6c-b703ff194e7f/outputs/book_2.png" alt="StoryFrom 어린이 영어작가 작품 예시">
+            <img src="book_2.png" alt="StoryFrom 어린이 영어작가 작품 예시">
             </div>
           
           </div>
@@ -1565,7 +1566,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     <span class="faq-label">자주 묻는 질문</span>
     <h2 class="faq-heading">신청 전에 걱정되는 것들</h2>
     <div class="mascot-wrap">
-      <img class="mascot-img" src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_3913101e-b674-4a61-ab6c-b703ff194e7f/outputs/doki2.png">
+      <img class="mascot-img" src="doki2.png">
     </div>
   </div>
 
