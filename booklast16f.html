@@ -1181,7 +1181,14 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 @media (max-width: 860px) {
 
   /* 히어로 여백 */
-  .hero { padding: 48px 20px 52px; }
+    .hero {
+    padding: 48px 20px 52px;
+    min-height: calc(100dvh - 72px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .hero-label { font-size: 12px; margin-bottom: 12px; }
   .hero-title { font-size: clamp(30px, 8.5vw, 44px); line-height: 1.2; margin-bottom: 14px; }
   .hero-sub-new { font-size: 17px; line-height: 1.7; margin-bottom: 20px; }
