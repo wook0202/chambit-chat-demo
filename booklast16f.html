@@ -4,7 +4,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chambit BookClubs</title>
-  
+
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
 
@@ -400,7 +400,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
    RESPONSIVE
 ════════════════════════════ */
 @media (max-width: 1100px) {
-  .hero { padding: 0 5vw; }
+  .hero { padding: 120px 5vw 80px; }
   .faq-section { padding: 60px 40px; gap: 36px; }
   .site-header-inner { padding: 0 24px; }
   .header-nav { gap: 24px; }
@@ -410,9 +410,6 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   
   .floating-banner { display: none; }
 
-  .hero {
-    padding: 8px 24px 32px;
-  }
 
   .faq-section { padding: 48px 24px; gap: 28px; }
   .faq-list-col { width: 100%; }
@@ -432,7 +429,6 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 .mobile-br { display: none; }
 @media (max-width: 480px) {
   .mobile-br { display: inline; }
-  .hero-title { font-size: clamp(28px, 8vw, 36px); }
   .hero-title .text-gradient { white-space: nowrap; }
   .header-logo-text { font-size: 18px; }
   .header-cta { padding: 8px 16px; font-size: 13px; }
@@ -480,7 +476,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   z-index: 0;
 }
 
-.hero-content { position: relative; z-index: 10; transform: translateZ(0); }
+.hero-content { position: relative; z-index: 10;}
 
 .hero-label {
   display: inline-block;
@@ -506,7 +502,9 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 .text-gradient {
   background: linear-gradient(120deg, #3182F6 0%, #7C3AED 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
   display: inline-block;
 }
 .hero-sub-new {
@@ -1171,8 +1169,8 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 
 @media (max-width: 860px) {
   .hamburger { display: flex; }
-  .header-nav { display: none !important; }
-  .header-cta { display: none !important; }
+  .header-nav { display: none; }
+  .header-cta { display: none; }
   .mobile-nav { display: block; }
 }
 
@@ -1566,7 +1564,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     <span class="faq-label">자주 묻는 질문</span>
     <h2 class="faq-heading">신청 전에 걱정되는 것들</h2>
     <div class="mascot-wrap">
-      <img class="mascot-img" src="doki2.png">
+      <img class="mascot-img" src="doki2.png" alt="참빛북클럽 닥터두기">
     </div>
   </div>
 
