@@ -679,7 +679,12 @@ body {
 .faq-label { font-size: 14px; font-weight: 700; color: var(--text-gray); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; display: block; }
 .faq-heading { font-size: clamp(30px, 4.2vw, 48px); font-weight: 900; color: var(--text-black); line-height: 1.18; letter-spacing: -0.04em; margin-bottom: 40px; word-break: keep-all; }
 .mascot-wrap { display: flex; justify-content: center; }
-.mascot-img { width: 160px; height: 160px; object-fit: contain; filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15)); }
+
+.mascot-img { width: 160px; height: 160px; object-fit: contain; filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15)); animation: mascot-float 4s ease-in-out infinite; }
+@keyframes mascot-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
 
 /* ━━━━━━━━━━ 모달 ━━━━━━━━━━ */
 
