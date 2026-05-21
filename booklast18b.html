@@ -354,7 +354,7 @@ body {
   font-size: clamp(36px, 5.5vw, 72px);
   line-height: 1.28;
   letter-spacing: -0.02em;
-  font-weight: 600;
+  font-weight: 750;
   color: #0A0F1E;
   margin-bottom: 24px;
   word-break: keep-all;
@@ -449,7 +449,7 @@ body {
 }
 .scenario-sec .scenario-header .sec-title {
   font-size: clamp(30px, 4.2vw, 48px);
-  font-weight: 700;
+  font-weight: 750;
   line-height: 1.18;
   margin-bottom: 16px;
   color: #111827;
@@ -681,9 +681,8 @@ body {
 .mascot-wrap { display: flex; justify-content: center; }
 .mascot-img { width: 160px; height: 160px; object-fit: contain; filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15)); }
 
-/* ════════════════════════════
-   모달
-════════════════════════════ */
+/* ━━━━━━━━━━ 모달 ━━━━━━━━━━ */
+
 .modal-overlay {
   position: fixed; top: 0; left: 0; width: 100%; height: 100%;
   background-color: rgba(0,0,0,0.6);
@@ -702,8 +701,12 @@ body {
 .modal-overlay.active .modal-content { transform: translateY(0); }
 .modal-close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: #b0b8c1; font-size: 28px; cursor: pointer; line-height: 1; transition: color 0.2s; }
 .modal-close:hover { color: #191f28; }
+
+/* 타이틀 */
 .modal-title { font-size: clamp(24px, 2.8vw, 30px); font-weight: 800; margin-bottom: 10px; color: #191f28; letter-spacing: -0.03em; line-height: 1.2; }
 .modal-subtitle { font-size: 18px; color: #6b7684; margin-bottom: 32px; line-height: 1.65; letter-spacing: -0.01em; word-break: keep-all; }
+
+/* 폼 — 기본 */
 .form-section-title { font-size: 17px; color: #191f28; font-weight: 700; margin: 32px 0 16px; letter-spacing: -0.015em; }
 .form-group { margin-bottom: 24px; }
 .form-label { display: block; font-size: 16px; color: #4e5968; margin-bottom: 8px; font-weight: 600; letter-spacing: -0.01em; }
@@ -719,6 +722,8 @@ body {
 .form-input:focus { outline: none; background-color: #fff; border-color: var(--brand-blue); box-shadow: 0 0 0 3px rgba(49,130,246,0.1); }
 .input-row { display: flex; gap: 10px; flex-wrap: wrap; }
 .input-row .form-input { flex: 1; min-width: 0; }
+
+/* 폼 — 휴대폰 인증 */
 .input-with-timer { position: relative; flex: 1; min-width: 0; display: flex; align-items: center; }
 .input-with-timer .form-input { padding-right: 50px; }
 .input-with-timer .verify-timer { position: absolute; right: 16px; font-size: 14px; font-weight: 700; color: #f04452; pointer-events: none; }
@@ -741,21 +746,30 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 .verify-status { margin-top: 8px; font-size: 13px; font-weight: 600; display: none; }
 .verify-status.success { color: #3182f6; display: block; }
 .verify-status.error   { color: #f04452; display: block; }
+
+/* 폼 — 약관 동의 */
 .agreement-group { border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; padding: 16px 20px; margin-top: 16px; background: #fff; }
-.agreement-item { display: flex; align-items: center; gap: 10px; margin-top: 14px; font-size: 16px; color: #4e5968; cursor: pointer; transition: color 0.2s; letter-spacing: -0.01em; }
+.agreement-item { display: flex; align-items: flex-start; gap: 10px; margin-top: 14px; font-size: 16px; color: #4e5968; cursor: pointer; transition: color 0.2s; letter-spacing: -0.01em; }
 .agreement-item.all { font-weight: 700; color: #191f28; margin-top: 0; font-size: 15px; }
 .agreement-badge { font-size: 12px; font-weight: 700; padding: 3px 6px; border-radius: 4px; margin-right: 4px; }
 .badge-required { background: #e8f3ff; color: var(--brand-blue); }
 .badge-optional { background: #f2f4f6; color: #8b95a1; }
-.agreement-view { margin-left: 8px; font-size: 14px; color: #8b95a1; text-decoration: underline; cursor: pointer; white-space: nowrap; }
+.agreement-view { margin-left: auto; font-size: 14px;  padding-top: 2px; color: #8b95a1; text-decoration: underline; cursor: pointer; white-space: nowrap; }
+
+/* 폼 — 안내 문구 */
 .form-guide { font-size: 14px; color: #8b95a1; margin-top: 8px; line-height: 1.65; display: flex; gap: 6px; align-items: flex-start; }
+.form-guide span { white-space: nowrap; }
 .form-guide::before { content: '·'; font-weight: bold; }
 .form-guide-url { color: var(--brand-blue); font-weight: 600; }
+
+/* 진행 바 */
 .modal-step { display: none; }
 .modal-step.active { display: block; animation: fadeInUp 0.35s forwards; }
 .modal-progress-wrap { margin-bottom: 28px; }
 .modal-progress-bar { height: 4px; background: #F2F4F6; border-radius: 2px; overflow: hidden; }
 .modal-progress-fill { height: 100%; background: #3182F6; border-radius: 2px; transition: width 0.4s ease; }
+
+/* 버튼 */
 .modal-btn { width: 100%; height: 58px; border: none; border-radius: 16px; font-family: var(--font); font-size: 17px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; }
 .modal-btn-primary { background: #191F28; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
 .modal-btn-primary:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
@@ -763,6 +777,8 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 .modal-btn-secondary { background: #F2F4F6; color: #4E5968; }
 .modal-btn-secondary:hover { background: #E5E8EB; color: #191F28; }
 .modal-btn-wrap { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
+
+/* 결제 단계 */
 .payment-check-list { list-style: none; padding: 0; margin: 20px 0 32px; display: flex; flex-direction: column; gap: 16px; }
 .payment-check-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 18px; color: #333d4b; line-height: 1.72; letter-spacing: -0.01em; }
 .payment-check-list li .check-icon { width: 22px; height: 22px; min-width: 22px; border-radius: 50%; background: #e8f3ff; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
