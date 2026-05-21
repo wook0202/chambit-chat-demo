@@ -8,9 +8,7 @@
 <style>
   
 
-/* ════════════════════════════
-   기본 설정
-════════════════════════════ */
+/* ━━━━━━━━━━ 기본 설정 ━━━━━━━━━━ */
 :root {
   --bg-faq: #f0f0f0;
   --text-black: #1A1A1A;
@@ -30,9 +28,7 @@ body {
   letter-spacing: -0.015em;
 }
 
-/* ════════════════════════════
-   애니메이션
-════════════════════════════ */
+/* ━━━━━━━━━━ 애니메이션 ━━━━━━━━━━ */
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   20%, 60% { transform: translateX(-6px); }
@@ -55,9 +51,7 @@ body {
   opacity: 1;
 }
 
-/* ════════════════════════════
-   헤더
-════════════════════════════ */
+/* ━━━━━━━━━━ 헤더 ━━━━━━━━━━ */
 .site-header {
   position: fixed;
   top: 0; left: 0;
@@ -143,9 +137,7 @@ body {
 .header-cta:hover { background: #E5302A; color: #fff; }
 .header-cta svg { width: 16px; height: 16px; stroke: currentColor; }
 
-/* ════════════════════════════
-   햄버거 메뉴 & 모바일 내비게이션
-════════════════════════════ */
+/* ━━━━━━━━━━ 햄버거 메뉴 · 모바일 내비 ━━━━━━━━━━ */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -233,9 +225,7 @@ body {
 }
 .mobile-nav-trial-btn:hover { background: #333; }
 
-/* ════════════════════════════
-   플로팅 배너
-════════════════════════════ */
+/* ━━━━━━━━━━ 플로팅 배너 ━━━━━━━━━━ */
 .floating-banner {
   position: fixed;
   bottom: 0; left: 0; width: 100%;
@@ -273,9 +263,7 @@ body {
 }
 .banner-btn:hover { background-color: #E85549; transform: translateY(-2px); }
 
-/* ════════════════════════════
-   스크롤 인디케이터
-════════════════════════════ */
+/* ━━━━━━━━━━ 스크롤 인디케이터 ━━━━━━━━━━ */
 .scroll-indicator {
   position: fixed;
   bottom: 104px;
@@ -297,9 +285,7 @@ body {
 }
 .scroll-indicator.banner-hidden { bottom: 32px; }
 
-/* ════════════════════════════
-   히어로 섹션
-════════════════════════════ */
+/* ━━━━━━━━━━ 히어로 섹션 ━━━━━━━━━━ */
 .hero {
   position: relative;
   background: #fff;
@@ -310,9 +296,8 @@ body {
   align-items: center;
   justify-content: center;
 }
-.hero-bg { display: none; }
 
-/* 배경 장식 원 */
+/* 배경 장식 */
 .hero::before {
   content: '';
   position: absolute;
@@ -349,11 +334,6 @@ body {
   pointer-events: none;
   z-index: 1;
 }
-.hero-mascot-left img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 .hero-mascot-right {
   position: absolute;
   right: calc(50% - 350px);
@@ -363,42 +343,18 @@ body {
   pointer-events: none;
   z-index: 1;
 }
+.hero-mascot-left img,
 .hero-mascot-right img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* 상단 태그 */
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid #E0E7FF;
-  background: #F5F3FF;
-  color: #5b57f5;
-  font-size: 13px;
-  font-weight: 600;
-  padding: 7px 16px;
-  border-radius: 999px;
-  margin-bottom: 28px;
-  letter-spacing: -0.01em;
-}
-.hero-tag-dot {
-  width: 6px; height: 6px;
-  background: #5b57f5;
-  border-radius: 50%;
-  animation: blink 1.6s ease-in-out infinite;
-}
-@keyframes blink {
-  0%,100% { opacity:1; } 50% { opacity:0.3; }
-}
-
 .hero-title {
   font-size: clamp(36px, 5.5vw, 72px);
-  line-height: 1.12;
-  letter-spacing: -0.05em;
-  font-weight: 900;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  font-weight: 600;
   color: #0A0F1E;
   margin-bottom: 24px;
   word-break: keep-all;
@@ -435,7 +391,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #0A0F1E;
+  background:  #5b57f5;
   color: white;
   font-family: var(--font);
   font-size: 16px;
@@ -450,19 +406,8 @@ body {
   white-space: nowrap;
 }
 .btn-hero-new:hover { background: #1a2236; transform: translateY(-1px); }
-.btn-hero-sub {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #6B7684;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.2s;
-  letter-spacing: -0.2px;
-}
-.btn-hero-sub:hover { color: #0A0F1E; }
+
+
 .stats-wrapper {
   display: inline-flex;
   align-items: center;
@@ -477,9 +422,7 @@ body {
 .stat-none { color: #5b57f5; font-weight: 700; }
 .stats-sep { color: #D1D5DB; }
 
-/* ════════════════════════════
-   시나리오 섹션
-════════════════════════════ */
+/* ━━━━━━━━━━ 시나리오 섹션 ━━━━━━━━━━ */
 .scenario-sec {
   background: #F8F9FB;
   border-bottom: 1px solid #F2F4F6;
@@ -559,9 +502,8 @@ body {
 .scenario-panel { display: none; }
 .scenario-panel.show { display: block; animation: fadeInUp 0.4s forwards; }
 
-/* ════════════════════════════
-   시나리오 — 피처 행 & 구분선
-════════════════════════════ */
+/* 피처 행 & 구분선 */
+
 .sc-feature-rows { display: flex; flex-direction: column; gap: 72px; padding: 8px 0 24px; }
 .sc-feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .sc-feature-divider { border: none; border-top: 1px solid #EAECF0; margin: 0; }
@@ -608,9 +550,8 @@ body {
   padding: 5px 13px; border-radius: 999px;
 }
 
-/* ════════════════════════════
-   화면 예시 카드 — 공통
-════════════════════════════ */
+/* 화면 예시 카드 */
+
 .sc-preview-card {
   background: #fff;
   border-radius: 20px;
@@ -911,7 +852,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     width: 155px;
     opacity: 1;
   }
-  .hero-title { font-size: clamp(24px, 7vw, 32px); line-height: 1.2; margin-bottom: 12px; }
+  .hero-title { font-size: clamp(28px, 8vw, 38px); line-height: 1.2; margin-bottom: 12px; }
   .hero-sub-new { font-size: 17px; line-height: 1.7; margin-bottom: 20px; }
   .stats-wrapper { margin: 16px auto; font-size: 15px; padding: 11px 20px; }
   .btn-hero-new { margin-top: 24px; height: 54px; font-size: 17px; max-width: 100%; }
@@ -973,17 +914,11 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 }
 
 /* ════════════════════════════
-   반응형 — 600px 이하
-════════════════════════════ */
-@media (max-width: 600px) {
-  .scenario-inner { padding: 0 16px; }
-}
-
-/* ════════════════════════════
    반응형 — 480px 이하
 ════════════════════════════ */
 @media (max-width: 480px) {
   /* 헤더 */
+  .scenario-inner { padding: 0 16px; }
   .mobile-br { display: inline; }
   .hero-title .text-gradient { white-space: nowrap; }
   .header-logo-text { font-size: 18px; }
@@ -1006,16 +941,6 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   .ui-learn-cols { grid-template-columns: repeat(3, 110px); gap: 8px; width: max-content; min-width: 100%; }
   .ui-learn-col-header { font-size: 11px; margin: 8px 6px; padding: 5px 2px; white-space: nowrap; }
   .ui-learn-list li { font-size: 11px; line-height: 1.8; }
-}
-
-/* ════════════════════════════
-   반응형 — 481~860px (학습 모형)
-════════════════════════════ */
-@media (max-width: 860px) and (min-width: 481px) {
-  .ui-mock--learning { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-  .ui-mock--learning::-webkit-scrollbar { display: none; }
-  .ui-learn-col-header { font-size: 13px; margin: 10px 8px 8px; padding: 6px 4px; }
-  .ui-learn-list li { font-size: 13px; line-height: 1.9; word-break: break-word; }
 }
 
 /* ════════════════════════════
@@ -1091,7 +1016,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 <!-- ══ HERO ══ -->
 <section class="hero">
   <div class="hero-mascot-left">
-    <img src="bookch1.png" alt="두기 마스코트">
+    <img src="bookchar/bookch1.png" alt="두기 마스코트">
   </div>
   <div class="hero-content animate-up">
     <div class="hero-text">
@@ -1116,7 +1041,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     </div>
   </div>
   <div class="hero-mascot-right">
-   <img src="bookch2.png" alt="오릴리 마스코트">
+   <img src="bookchar/bookch2.png" alt="오릴리 마스코트">
   </div>
 </section>
 
