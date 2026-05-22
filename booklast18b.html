@@ -6,8 +6,6 @@
 
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
-  
-
 /* ━━━━━━━━━━ 기본 설정 ━━━━━━━━━━ */
 :root {
   --bg-faq: #f0f0f0;
@@ -117,7 +115,7 @@ body {
   white-space: nowrap;
 }
 .header-nav a:hover { color: #E5302A; }
-.header-nav a.nav-free { color: #1a1a1a; font-weight: 700; }
+.header-nav a.nav-free { font-weight: 700; }
 .header-cta {
   display: flex;
   align-items: center;
@@ -288,23 +286,36 @@ body {
 /* ━━━━━━━━━━ 히어로 섹션 ━━━━━━━━━━ */
 .hero {
   position: relative;
-  background: #fff;
+  background-color: #faf8ff;
+  background-image: url('backig1.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   border-bottom: 1px solid #EAECF0;
   overflow: hidden;
-  padding: 100px 24px 80px;
+  min-height: calc(100vh - 148px);
+  padding: 100px 24px 200px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* 배경 장식 */
+/* 배경 장식 — 텍스트 가독성을 위한 중앙 부드러운 광원 */
 .hero::before {
   content: '';
   position: absolute;
-  top: -160px; left: 50%;
-  transform: translateX(-50%);
-  width: 700px; height: 700px;
-  background: radial-gradient(ellipse, rgba(91,87,245,0.07) 0%, transparent 70%);
+  inset: 0;
+  background: radial-gradient(ellipse 55% 60% at 50% 42%, rgba(255,255,255,0.6) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 배경 이미지 투명도 조절 레이어 */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.30);
   pointer-events: none;
   z-index: 0;
 }
@@ -322,15 +333,12 @@ body {
 }
 .hero-text {
   width: 100%;
-  position: relative;
-  z-index: 2;
 }
 .hero-mascot-left {
   position: absolute;
   left: calc(50% - 350px);
   bottom: 0;
   width: 180px;
-  opacity: 1;
   pointer-events: none;
   z-index: 1;
 }
@@ -339,7 +347,6 @@ body {
   right: calc(50% - 350px);
   bottom: 0;
   width: 180px;
-  opacity: 1;
   pointer-events: none;
   z-index: 1;
 }
@@ -351,7 +358,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(36px, 5.5vw, 72px);
+  font-size: clamp(33px, 5.0vw, 66px);
   line-height: 1.28;
   letter-spacing: -0.02em;
   font-weight: 750;
@@ -391,7 +398,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background:  #5b57f5;
+  background: #5b57f5;
   color: white;
   font-family: var(--font);
   font-size: 16px;
@@ -534,7 +541,7 @@ body {
   border-left: 3px solid #3182F6;
   border-radius: 8px;
   padding: 14px 18px;
-  font-size: clamp(15px, 1.4vw, 15px);
+  font-size: 15px;
   color: #374151;
   line-height: 1.72;
   letter-spacing: -0.01em;
@@ -583,15 +590,11 @@ body {
 .ui-btn-row { display:flex; gap:6px; margin-bottom:8px; flex-wrap:wrap; }
 .ui-btn { padding:4px 10px; border-radius:6px; font-size:10px; font-weight:700; border: 1px solid; cursor:default; }
 .ui-btn-blue   { background:#EEF4FF; color:#3182F6; border-color:#3182F6; }
-.ui-btn-dark   { background:#191F28; color:#fff; border-color:#191F28; }
 .ui-btn-orange { background:#FFF0E6; color:#FF6B00; border-color:#FF6B00; }
 .rec-section-label { font-size: 11px; font-weight: 700; color: #8B95A1; margin-bottom: 10px; }
 .rec-submit-row { display: flex; gap: 6px; margin-top: 10px; }
 .rec-timer { font-size: 10px; color: #8B95A1; }
 .rec-icon-dot { color: #fff; font-size: 12px; }
-.trans-toolbar { display: flex; gap: 6px; margin-bottom: 10px; }
-.storyfrom-label { font-size: 11px; font-weight: 700; color: #8B95A1; margin-bottom: 10px; text-align: center; }
-.storyfrom-img { width: 100%; border-radius: 10px; display: block; }
 
 /* ════════════════════════════
    화면 예시 카드 — 녹음 기능
@@ -613,38 +616,6 @@ body {
 .ui-rec-wave span:nth-child(7) { animation-delay:.2s; }
 .ui-rec-wave span:nth-child(8) { animation-delay:.1s; }
 
-/* ════════════════════════════
-   화면 예시 카드 — 필사 모형
-════════════════════════════ */
-.ui-copy-lines { display:flex; flex-direction:column; gap:5px; }
-.ui-copy-line { background:#fff; border-radius:6px; padding:6px 10px; border:1px solid #E5E8EB; display:flex; align-items:center; gap:8px; }
-.ui-copy-eng { font-size:11px; color:#4E5968; font-style:italic; flex:1; }
-.ui-copy-written { font-family:'Georgia',serif; font-size:11px; color:#3182F6; flex:1; }
-
-/* ════════════════════════════
-   화면 예시 카드 — 영작훈련 모형
-════════════════════════════ */
-.ui-trans-table { width:100%; border-collapse:collapse; background:#fff; border-radius:8px; overflow:hidden; border:1px solid #E5E8EB; }
-.ui-trans-table th { font-size:10px; font-weight:800; padding:5px 8px; text-align:left; }
-.ui-trans-table th:first-child { background:#FFF4E6; color:#E07B00; }
-.ui-trans-table th:last-child  { background:#EEF4FF; color:#3182F6; }
-.ui-trans-table td { padding:5px 8px; font-size:11px; border-top:1px solid #F2F4F6; }
-.ui-trans-table td:last-child { font-family:'Georgia',serif; color:#3182F6; }
-
-/* ════════════════════════════
-   화면 예시 카드 — 학습 현황 모형
-════════════════════════════ */
-.ui-mock--learning { padding: 16px 20px; }
-.ui-learn-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 8px; }
-.ui-learn-col { border: 1px solid #3182F6; border-radius: 12px; overflow: hidden; padding-bottom: 12px; background: #F0F6FF; }
-.ui-learn-col-header {
-  display: block; margin: 12px 10px 10px; padding: 5px 0;
-  text-align: center; font-size: 12px; font-weight: 800;
-  color: #fff; letter-spacing: -0.01em;
-  border: 1.5px solid #3182F6; background: #3182F6; border-radius: 999px;
-}
-.ui-learn-list { list-style: none; margin: 0; padding: 0 6px; }
-.ui-learn-list li { font-size: 12px; color: #3182F6; line-height: 2; font-weight: 600; text-align: center; word-break: keep-all; }
 
 /* ════════════════════════════
    자주 묻는 질문 (FAQ)
@@ -825,10 +796,6 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 .footer-info p { font-size: 14px; line-height: 1.9; color: #999999; margin-bottom: 4px; }
 .footer-info .footer-copyright { margin-top: 16px; font-size: 14px; color: #666; }
 
-/* ════════════════════════════
-   모바일 줄바꿈 제어
-════════════════════════════ */
-.mobile-br { display: none; }
 
 /* ════════════════════════════
    반응형 — 1100px 이하
@@ -854,24 +821,20 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   .scroll-indicator { display: none; }
 
   /* 히어로 */
-  .hero { padding: 52px 20px 200px; min-height: unset; display: flex; align-items: flex-start; }
-  .hero-content { flex-direction: column; padding: 0 20px; gap: 20px; }
+  .hero { padding: 52px 20px 200px; min-height: unset; display: flex; align-items: flex-start; background-size: cover; background-position: center 20%; }
+  .hero-content { padding: 0 20px; gap: 20px; }
   .hero-text { text-align: center; order: 0; padding-right: 0; }
   .hero-mascot-left {
-    display: block;
     position: absolute;
     left: -5px;
     bottom: 0;
     width: 155px;
-    opacity: 1;
   }
   .hero-mascot-right {
-    display: block;
     position: absolute;
     right: -5px;
     bottom: 0;
     width: 155px;
-    opacity: 1;
   }
   .hero-title { font-size: clamp(30px, 9vw, 42px); line-height: 1.2; margin-bottom: 12px; }
   .hero-sub-new { font-size: 17px; line-height: 1.7; margin-bottom: 20px; }
@@ -895,7 +858,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   .sc-feature-body { font-size: 17px; line-height: 1.75; }
   .sc-feature-point-box { font-size: 14px; padding: 12px 16px; margin-top: 14px; }
   .sc-preview-card { border-radius: 16px; }
-  .sc-preview-card--fill { height: auto; max-height: none; border-radius: 16px; overflow: hidden; background: transparent; align-self: auto; border: none; box-shadow: none; padding: 0; }
+  .sc-preview-card--fill { height: auto; max-height: none; border-radius: 16px; align-self: auto; }
   .sc-preview-card--fill img { width: 100%; height: auto; object-fit: contain; display: block; border-radius: 0; }
   .preview-card-img { padding: 0; }
   .preview-card-img img { border-radius: 16px; width: 100%; display: block; }
@@ -938,12 +901,13 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
    반응형 — 480px 이하
 ════════════════════════════ */
 @media (max-width: 480px) {
+  /* 히어로 배경 — 소형 모바일 */
+  .hero { background-position: center 15%; }
+
   /* 헤더 */
   .scenario-inner { padding: 0 16px; }
-  .mobile-br { display: inline; }
   .hero-title .text-gradient { white-space: nowrap; }
   .header-logo-text { font-size: 18px; }
-  .header-cta { padding: 8px 16px; font-size: 13px; }
 
   /* 시나리오/자주 묻는 질문 (FAQ) 타이포 */
   .scenario-sec .scenario-header .sec-title,
@@ -956,18 +920,13 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   .modal-subtitle { font-size: 17px; }
   .form-input, .form-input::placeholder { font-size: 16px; }
   .payment-check-list li { font-size: 17px; }
-
-  /* 학습 모형 — 가로 스크롤 */
-  .ui-mock--learning { padding: 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .ui-learn-cols { grid-template-columns: repeat(3, 110px); gap: 8px; width: max-content; min-width: 100%; }
-  .ui-learn-col-header { font-size: 11px; margin: 8px 6px; padding: 5px 2px; white-space: nowrap; }
-  .ui-learn-list li { font-size: 11px; line-height: 1.8; }
 }
 
 /* ════════════════════════════
    반응형 — 375px 이하
 ════════════════════════════ */
 @media (max-width: 375px) {
+  .hero { background-position: center 10%; }
   .hero-title { font-size: 24px; }
   .sc-feature-heading { font-size: 21px; }
   .sc-feature-body { font-size: 16px; }
@@ -982,7 +941,6 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   .scenario-sec .scenario-tab { font-size: 13px; padding: 11px 4px; min-height: 44px; }
 }
 
-
 </style>
 </head>
 <body>
@@ -990,7 +948,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 <!-- ══ HEADER ══ -->
 <header class="site-header">
   <div class="site-header-inner">
-    <a href="##" class="header-logo">
+    <a href="#" class="header-logo">
       <span class="header-logo-tag">CHAMBIT</span>
       <span class="header-logo-text"><strong>BOOK</strong><span class="logo-light">CLUBS</span></span>
     </a>
@@ -1041,7 +999,6 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   </div>
   <div class="hero-content animate-up">
     <div class="hero-text">
-      
       <h1 class="hero-title">
         우리 학원에 딱 맞는<br>
         <span class="text-gradient">독서 수업</span>을<br>
@@ -1066,9 +1023,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   </div>
 </section>
 
-
-
- <!-- 스크롤 유도 표시 -->
+<!-- 스크롤 유도 표시 -->
   <div class="scroll-indicator" id="scrollIndicator" onclick="window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M6 9L12 15L18 9" stroke="#1a1a2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -1519,7 +1474,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
         기타 오류 현상 발생시 문의전화: 070-7547-8969(고객지원팀) / 평일 오전 10시 ~ 오후 6시
       </div>
     </div>
-    </div></div>
+  </div>
   </div>
 
 
@@ -1580,7 +1535,7 @@ const verifyTimer    = document.getElementById('verifyTimer');
 const confirmCodeBtn = document.getElementById('confirmCodeBtn');
 const verifyStatus   = document.getElementById('verifyStatus');
 
-let timerInterval = null, phoneVerified = false, generatedCode = '';
+let timerInterval = null, phoneVerified = false;
 
 /* ── 인증 타이머 (3분 카운트다운) ── */
 function startTimer(seconds) {
@@ -1608,12 +1563,10 @@ sendCodeBtn.addEventListener('click', () => {
   if (phone.length < 10 || phone.length > 11) {
     verifyStatus.className = 'verify-status error';
     verifyStatus.textContent = '올바른 휴대폰 번호를 입력해주세요.';
-    verifyStatus.style.display = 'block';
     phoneInput.classList.add('input-error');
     setTimeout(() => phoneInput.classList.remove('input-error'), 400);
     return;
   }
-  generatedCode = String(Math.floor(100000 + Math.random() * 900000));
   phoneInput.disabled = true;
   sendCodeBtn.textContent = '재발송';
   sendCodeBtn.classList.add('sent');
@@ -1623,7 +1576,6 @@ sendCodeBtn.addEventListener('click', () => {
   verifyCodeRow.classList.add('visible');
   verifyStatus.className = 'verify-status success';
   verifyStatus.textContent = '인증번호가 발송되었습니다. (3분 내 입력)';
-  verifyStatus.style.display = 'block';
   codeInput.value = '';
   startTimer(180);
 });
@@ -1735,7 +1687,6 @@ form.addEventListener('submit', (e) => {
   if (!phoneVerified) {
     verifyStatus.className = 'verify-status error';
     verifyStatus.textContent = '휴대폰 번호 인증을 완료해주세요.';
-    verifyStatus.style.display = 'block';
     phoneInput.classList.add('input-error');
     setTimeout(() => phoneInput.classList.remove('input-error'), 400);
     return;
