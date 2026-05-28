@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0221)file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html -->
 <html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chambit BookClubs</title>
 
-<link rel="stylesheet" as="style" crossorigin="" href="./booklast21_files/pretendard.css">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
   
 
@@ -47,9 +46,8 @@ body {
   50%       { transform: translateX(-50%) translateY(8px); opacity: 1; }
 }
 .animate-up {
-  animation: fadeInUp 0.6s cubic-bezier(0.2,0.8,0.2,1) forwards;
-  animation-fill-mode: both;
-  opacity: 1;
+  animation: fadeInUp 0.6s cubic-bezier(0.2,0.8,0.2,1) both;
+  /* animation-fill-mode: both 를 shorthand에 포함시키고 별도 선언 제거 */
 }
 
 /* ━━━━━━━━━━ 헤더 ━━━━━━━━━━ */
@@ -537,7 +535,7 @@ body {
   border-left: 3px solid #3182F6;
   border-radius: 8px;
   padding: 14px 18px;
-  font-size: clamp(15px, 1.4vw, 15px);
+  font-size: 15px;
   color: #374151;
   line-height: 1.72;
   letter-spacing: -0.01em;
@@ -857,15 +855,19 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   .scroll-indicator { display: none; }
 
   /* 히어로 */
-  .hero { padding: 52px 20px 200px; min-height: unset; display: flex; align-items: flex-start; background-size: cover; background-position: center center; }
+  .hero { padding: 52px 20px 160px; min-height: unset; display: flex; align-items: flex-start; 
+   background-image: url('backig2.png'); background-size: cover; background-repeat: no-repeat; background-position: center top; }
+
+  .hero::before { background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,255,255,0.45) 0%, transparent 70%); }
   .hero-content { flex-direction: column; padding: 0 20px; gap: 20px; }
   .hero-text { text-align: center; order: 0; padding-right: 0; }
+
   .hero-mascot-left {
     display: block;
     position: absolute;
     left: -5px;
     bottom: 0;
-    width: 155px;
+    width: 130px;
     opacity: 1;
   }
   .hero-mascot-right {
@@ -873,7 +875,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     position: absolute;
     right: -5px;
     bottom: 0;
-    width: 155px;
+    width: 130px;
     opacity: 1;
   }
   .hero-title { font-size: clamp(30px, 9vw, 42px); line-height: 1.2; margin-bottom: 12px; }
@@ -971,20 +973,13 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
    반응형 — 375px 이하
 ════════════════════════════ */
 @media (max-width: 375px) {
+
   .hero-title { font-size: 24px; }
   .sc-feature-heading { font-size: 21px; }
   .sc-feature-body { font-size: 16px; }
-  .scenario-sec .scenario-tab { font-size: 14px; padding: 11px 4px; }
-}
-
-/* ════════════════════════════
-   반응형 — 360px 이하 (시나리오 탭 소형)
-════════════════════════════ */
-@media (max-width: 360px) {
   .scenario-sec .scenario-tabs { gap: 5px; }
   .scenario-sec .scenario-tab { font-size: 13px; padding: 11px 4px; min-height: 44px; }
 }
-
 
 </style>
 </head>
@@ -993,19 +988,19 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 <!-- ══ HEADER ══ -->
 <header class="site-header">
   <div class="site-header-inner">
-    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html##" class="header-logo">
+    <a href="#" class="header-logo">
       <span class="header-logo-tag">CHAMBIT</span>
       <span class="header-logo-text"><strong>BOOK</strong><span class="logo-light">CLUBS</span></span>
     </a>
     <div class="header-right">
       <nav class="header-nav">
-        <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#">참빛북클럽</a>
-        <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#">이용안내</a>
-        <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#">새소식</a>
-        <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#" class="nav-free">2주 무료체험</a>
-        <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#">내 메뉴</a>
+        <a href="#">참빛북클럽</a>
+        <a href="#">이용안내</a>
+        <a href="#">새소식</a>
+        <a href="#" class="nav-free">2주 무료체험</a>
+        <a href="#">내 메뉴</a>
       </nav>
-      <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#" class="header-cta">
+      <a href="#" class="header-cta">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
@@ -1026,11 +1021,11 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 <!-- ══ MOBILE NAV ══ -->
 <div class="mobile-nav" id="mobileNav">
   <nav>
-    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#">참빛북클럽</a>
-    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#">이용안내</a>
-    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#">새소식</a>
-    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#" class="mobile-nav-cta">2주 무료체험</a>
-    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#">내 메뉴</a>
+    <a href="#">참빛북클럽</a>
+    <a href="#">이용안내</a>
+    <a href="#">새소식</a>
+    <a href="#" class="mobile-nav-cta">2주 무료체험</a>
+    <a href="#">내 메뉴</a>
   </nav>
   <div style="padding: 0 24px;">
     <button class="mobile-nav-trial-btn" id="mobileTrialBtn">무료체험 바로 신청하기</button>
@@ -1051,7 +1046,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
         직접 체험해 보세요
       </h1>
       <p class="hero-sub-new">
-        복잡한 설명 없이,
+        복잡한 설명 없이, <br>
         참빛북클럽을 2주간 무료로 경험하세요.
       </p>
       <div class="hero-cta-row">
@@ -1071,8 +1066,8 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 
 
 
- <!-- 스크롤 유도 표시 -->
-  <div class="scroll-indicator" id="scrollIndicator" onclick="window.scrollBy({ top: window.innerHeight, behavior: &#39;smooth&#39; })">
+  <!-- 스크롤 유도 표시 -->
+  <div class="scroll-indicator" id="scrollIndicator" onclick="window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M6 9L12 15L18 9" stroke="#1a1a2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
     </svg>
@@ -1088,14 +1083,14 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     </div>
 
     <div class="scenario-tabs">
-      <div class="scenario-tab on" data-type="class" onclick="setScenario( &#39;sc-class&#39;, this)">📖 수업용</div>
-      <div class="scenario-tab" data-type="hw" onclick="setScenario( &#39;sc-hw&#39;,   this)">✏️ 숙제용</div>
-      <div class="scenario-tab" data-type="lab" onclick="setScenario( &#39;sc-lab&#39;,  this)">🖥️ Lab실용</div>
+      <div class="scenario-tab on" data-type="class" onclick="setScenario( 'sc-class', this)">📖 수업용</div>
+      <div class="scenario-tab" data-type="hw" onclick="setScenario( 'sc-hw',   this)">✏️ 숙제용</div>
+      <div class="scenario-tab" data-type="lab" onclick="setScenario( 'sc-lab',  this)">🖥️ Lab실용</div>
     </div>
     
     
 
-    <!-- ══════════ 수업용 ══════════ -->
+  <!-- ══════════ 수업용 ══════════ -->
     <div id="sc-class" class="scenario-panel show">
       <div class="sc-feature-rows">
 
@@ -1111,7 +1106,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
           </div>
           <div>
             <div class="sc-preview-card sc-preview-card--no-label preview-card-img">
-              <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/img_word.jpg" alt="Word List 화면 예시">
+              <img src="img_word.jpg" alt="Word List 화면 예시">
             </div>
           </div>
         </div>
@@ -1122,7 +1117,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
         <div class="sc-feature-row">
           <div>
             <div class="sc-preview-card sc-preview-card--no-label sc-preview-card--fill">
-            <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/learn.png" alt="While Reading 화면 예시">
+            <img src="learn.png" alt="While Reading 화면 예시">
            </div>
           </div>
           <div class="sc-feature-text">
@@ -1149,7 +1144,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
           </div>
           <div>
           <div class="sc-preview-card sc-preview-card--no-label sc-preview-card--fill">
-         <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/selfbook.png" alt="After Reading 화면 예시">
+         <img src="selfbook.png" alt="After Reading 화면 예시">
          </div>
           </div>
         </div>
@@ -1193,7 +1188,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 <div class="sc-feature-row">
   <div>
     <div class="sc-preview-card sc-preview-card--no-label preview-card-img">
-      <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/translation_sample.png" alt="영작훈련 화면 예시">
+      <img src="translation_sample.png" alt="영작훈련 화면 예시">
     </div>
   </div>
   <div class="sc-feature-text">
@@ -1217,7 +1212,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     <p class="sc-feature-body">영어책 필사를 통해 영어 문장을 암기하게 해주세요. 아이들이 책 1권을 필사하면 1번의 성취감을 느끼며 2권, 3권을 써보면서 점점 더 성취감을 느끼게 됩니다. 학생들이 오랫동안 꾸준히 스스로 할 수 있는 학습법이에요.</p>
   </div>
   <div class="sc-preview-card sc-preview-card--no-label sc-preview-card--fill">
-    <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/copy_sample.png" alt="필사훈련 화면 예시">
+    <img src="copy_sample.png" alt="필사훈련 화면 예시">
   </div>
 </div>
 
@@ -1238,7 +1233,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
           </div>
 
           <div class="sc-preview-card sc-preview-card--no-label sc-preview-card--fill">
-          <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/bookplay_1.png" alt="LEARNING 학습 화면 예시">
+          <img src="bookplay_1.png" alt="LEARNING 학습 화면 예시">
           </div>
 
         </div>
@@ -1286,7 +1281,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
           <div>
 
             <div class="sc-preview-card sc-preview-card--no-label sc-preview-card--fill">
-            <img src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/book_2.png" alt="StoryFrom 어린이 영어작가 작품 예시">
+            <img src="book_2.png" alt="StoryFrom 어린이 영어작가 작품 예시">
             </div>
           
           </div>
@@ -1304,7 +1299,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     <span class="faq-label">자주 묻는 질문</span>
     <h2 class="faq-heading">신청 전에 걱정되는 것들</h2>
     <div class="mascot-wrap">
-      <img class="mascot-img" src="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/doki2.png" alt="참빛북클럽 닥터두기">
+      <img class="mascot-img" src="doki2.png" alt="참빛북클럽 닥터두기">
     </div>
   </div>
 
@@ -1367,16 +1362,16 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   <div class="footer-top">
     <div class="footer-top-inner">
       <div class="footer-top-links">
-        <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#">회사소개</a>
-        <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#" class="footer-link-bold">개인정보처리방침</a>
-        <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#">이용약관</a>
+        <a href="#">회사소개</a>
+        <a href="#" class="footer-link-bold">개인정보처리방침</a>
+        <a href="#">이용약관</a>
       </div>
       <div class="footer-social">
-                    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#" class="sns-insta" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><circle cx="12" cy="12" r="4"></circle><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#" class="sns-facebook" title="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-                    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#" class="sns-blog" title="Blog"><span style="font-size:10px;font-weight:900;color:#fff;">blog</span></a>
-                    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#" class="sns-line" title="Line"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.630 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.630 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"></path></svg></a>
-                    <a href="file:///C:/Users/chambit_halim/AppData/Roaming/Claude/local-agent-mode-sessions/5724172b-e26e-4eca-9d70-7f0bb23f4f1e/60ae67a5-5bed-42b5-9488-df16e86a86e4/local_aeaadb03-24b0-433e-bf4e-4c70eecd728f/outputs/booklast18b.html#" class="sns-kakao" title="KakaoTalk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.477 3 2 6.477 2 10.8c0 2.7 1.608 5.076 4.05 6.516L5.1 20.4l3.75-2.4c1.008.204 2.052.3 3.15.3 5.523 0 10-3.477 10-7.8S17.523 3 12 3z"></path></svg></a>
+                    <a href="#" class="sns-insta" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><circle cx="12" cy="12" r="4"></circle><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="#" class="sns-facebook" title="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="#" class="sns-blog" title="Blog"><span style="font-size:10px;font-weight:900;color:#fff;">blog</span></a>
+                    <a href="#" class="sns-line" title="Line"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.630 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.630 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"></path></svg></a>
+                    <a href="#" class="sns-kakao" title="KakaoTalk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.477 3 2 6.477 2 10.8c0 2.7 1.608 5.076 4.05 6.516L5.1 20.4l3.75-2.4c1.008.204 2.052.3 3.15.3 5.523 0 10-3.477 10-7.8S17.523 3 12 3z"></path></svg></a>
                 </div>
     </div>
   </div>
@@ -1417,7 +1412,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
     </div>
 
     <!-- ── STEP 1: 가입 정보 ── -->
-    <div class="modal-step active" id="modalStep1"><div id="formSection">
+    <div class="modal-step active" id="modalStep1">
     <form id="experienceForm">
     <h2 class="modal-title">무료체험 신청</h2>
 
@@ -1480,10 +1475,10 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
         </div>
         <div class="modal-btn-wrap"><button type="submit" class="modal-btn modal-btn-primary">다음으로</button></div>
       </form>
-    </div></div>
+    </div>
 
     <!-- ── STEP 2: 결제 ── -->
-    <div class="modal-step" id="modalStep2"><div id="paymentSection">
+    <div class="modal-step" id="modalStep2">
       <h2 class="modal-title">결제 진행</h2>
       <ul class="payment-check-list">
         <li>
@@ -1522,7 +1517,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
         기타 오류 현상 발생시 문의전화: 070-7547-8969(고객지원팀) / 평일 오전 10시 ~ 오후 6시
       </div>
     </div>
-    </div></div>
+    </div>
   </div>
 
 
@@ -1611,7 +1606,6 @@ sendCodeBtn.addEventListener('click', () => {
   if (phone.length < 10 || phone.length > 11) {
     verifyStatus.className = 'verify-status error';
     verifyStatus.textContent = '올바른 휴대폰 번호를 입력해주세요.';
-    verifyStatus.style.display = 'block';
     phoneInput.classList.add('input-error');
     setTimeout(() => phoneInput.classList.remove('input-error'), 400);
     return;
@@ -1626,7 +1620,6 @@ sendCodeBtn.addEventListener('click', () => {
   verifyCodeRow.classList.add('visible');
   verifyStatus.className = 'verify-status success';
   verifyStatus.textContent = '인증번호가 발송되었습니다. (3분 내 입력)';
-  verifyStatus.style.display = 'block';
   codeInput.value = '';
   startTimer(180);
 });
@@ -1660,35 +1653,34 @@ if (agreeAll) {
 }
 
 /* ══ 비밀번호 실시간 유효성 표시 ══ */
-(function () {
-  if (pwInput) {
-    pwInput.addEventListener('input', () => {
-      if (pwPattern.test(pwInput.value)) {
-        pwHint.style.color = '#3182f6';
-        pwHint.textContent = '사용 가능한 비밀번호입니다.';
-      } else {
-        pwHint.style.color = '#f04452';
-        pwHint.textContent = '6~16자의 영문, 숫자, 특수문자를 조합하여 만들어 주세요.';
-      }
-    });
+function validatePassword() {
+  const pw        = pwInput.value;
+  const pwConfirm = pwConfirmInput.value;
+
+  if (!pwPattern.test(pw)) {
+    pwHint.style.color = '#f04452';
+    pwHint.textContent = '6~16자의 영문, 숫자, 특수문자를 조합하여 만들어 주세요.';
+    return;
   }
-  if (pwConfirmInput) {
-    pwConfirmInput.addEventListener('input', () => {
-      if (pwConfirmInput.value && pwInput.value !== pwConfirmInput.value) {
-        pwHint.style.color = '#f04452';
-        pwHint.textContent = '비밀번호가 일치하지 않습니다.';
-      } else if (pwConfirmInput.value && pwInput.value === pwConfirmInput.value) {
-        if (pwPattern.test(pwInput.value)) {
-          pwHint.style.color = '#3182f6';
-          pwHint.textContent = '비밀번호가 일치합니다.';
-        } else {
-          pwHint.style.color = '#f04452';
-          pwHint.textContent = '6~16자의 영문, 숫자, 특수문자를 조합하여 만들어 주세요.';
-        }
-      }
-    });
+
+  if (pwConfirm && pw !== pwConfirm) {
+    pwHint.style.color = '#f04452';
+    pwHint.textContent = '비밀번호가 일치하지 않습니다.';
+    return;
   }
-})();
+
+  if (pwConfirm && pw === pwConfirm) {
+    pwHint.style.color = '#3182f6';
+    pwHint.textContent = '비밀번호가 일치합니다.';
+    return;
+  }
+
+  pwHint.style.color = '#3182f6';
+  pwHint.textContent = '사용 가능한 비밀번호입니다.';
+}
+
+if (pwInput)        pwInput.addEventListener('input', validatePassword);
+if (pwConfirmInput) pwConfirmInput.addEventListener('input', validatePassword);
 
 /* ══ 폼 제출 유효성 검사 → 결제 단계로 이동 ══ */
 form.addEventListener('submit', (e) => {
@@ -1828,10 +1820,17 @@ document.getElementById('cardRegisterBtn').onclick = () => {
     });
   }
 
-  /* ── ESC 키로 메뉴 닫기 ── */
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeNav();
-  });
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeNav();
+    // 모달도 함께 닫기
+    if (modalOverlay.classList.contains('active')) {
+      modalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+});
+  
 })();
 
 </script>
