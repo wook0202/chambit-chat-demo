@@ -763,10 +763,10 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
 .agreement-view { margin-left: auto; font-size: 14px;  padding-top: 2px; color: #8b95a1; text-decoration: underline; cursor: pointer; white-space: nowrap; }
 
 /* 폼 — 안내 문구 */
-.form-guide { font-size: 14px; color: #8b95a1; margin-top: 8px; line-height: 1.65; display: flex; gap: 6px; align-items: flex-start; }
-.form-guide span { white-space: nowrap; }
+.form-guide { font-size: 14px; color: #8b95a1; margin-top: 8px; line-height: 1.65; display: flex; gap: 6px; align-items: flex-start; word-break: keep-all; }
 .form-guide::before { content: '·'; font-weight: bold; }
-.form-guide-url { color: var(--brand-blue); font-weight: 600; }
+.form-guide-url { color: var(--brand-blue); font-weight: 600; white-space: nowrap; }
+.agreement-item span { word-break: keep-all; }
 
 /* 진행 바 */
 .modal-step { display: none; }
