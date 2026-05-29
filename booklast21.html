@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chambit BookClubs</title>
 
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
   
 
@@ -47,7 +47,6 @@ body {
 }
 .animate-up {
   animation: fadeInUp 0.6s cubic-bezier(0.2,0.8,0.2,1) both;
-  /* animation-fill-mode: both 를 shorthand에 포함시키고 별도 선언 제거 */
 }
 
 /* ━━━━━━━━━━ 헤더 ━━━━━━━━━━ */
@@ -295,7 +294,6 @@ body {
   border-bottom: 1px solid #EAECF0;
   overflow: hidden;
   padding: 100px 24px 80px;
-  min-height: clamp(560px, calc(100svh - 72px), 760px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -359,7 +357,7 @@ body {
   font-size: clamp(36px, 5.5vw, 72px);
   line-height: 1.28;
   letter-spacing: -0.02em;
-  font-weight: 750;
+  font-weight: 700;
   color: #0A0F1E;
   margin-bottom: 24px;
   word-break: keep-all;
@@ -396,7 +394,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background:  #5b57f5;
+  background: #5b57f5;
   color: white;
   font-family: var(--font);
   font-size: 16px;
@@ -454,7 +452,7 @@ body {
 }
 .scenario-sec .scenario-header .sec-title {
   font-size: clamp(30px, 4.2vw, 48px);
-  font-weight: 750;
+  font-weight: 700;
   line-height: 1.18;
   margin-bottom: 16px;
   color: #111827;
@@ -588,15 +586,11 @@ body {
 .ui-btn-row { display:flex; gap:6px; margin-bottom:8px; flex-wrap:wrap; }
 .ui-btn { padding:4px 10px; border-radius:6px; font-size:10px; font-weight:700; border: 1px solid; cursor:default; }
 .ui-btn-blue   { background:#EEF4FF; color:#3182F6; border-color:#3182F6; }
-.ui-btn-dark   { background:#191F28; color:#fff; border-color:#191F28; }
 .ui-btn-orange { background:#FFF0E6; color:#FF6B00; border-color:#FF6B00; }
 .rec-section-label { font-size: 11px; font-weight: 700; color: #8B95A1; margin-bottom: 10px; }
 .rec-submit-row { display: flex; gap: 6px; margin-top: 10px; }
 .rec-timer { font-size: 10px; color: #8B95A1; }
 .rec-icon-dot { color: #fff; font-size: 12px; }
-.trans-toolbar { display: flex; gap: 6px; margin-bottom: 10px; }
-.storyfrom-label { font-size: 11px; font-weight: 700; color: #8B95A1; margin-bottom: 10px; text-align: center; }
-.storyfrom-img { width: 100%; border-radius: 10px; display: block; }
 
 /* ════════════════════════════
    화면 예시 카드 — 녹음 기능
@@ -617,39 +611,6 @@ body {
 .ui-rec-wave span:nth-child(6) { animation-delay:.3s; }
 .ui-rec-wave span:nth-child(7) { animation-delay:.2s; }
 .ui-rec-wave span:nth-child(8) { animation-delay:.1s; }
-
-/* ════════════════════════════
-   화면 예시 카드 — 필사 모형
-════════════════════════════ */
-.ui-copy-lines { display:flex; flex-direction:column; gap:5px; }
-.ui-copy-line { background:#fff; border-radius:6px; padding:6px 10px; border:1px solid #E5E8EB; display:flex; align-items:center; gap:8px; }
-.ui-copy-eng { font-size:11px; color:#4E5968; font-style:italic; flex:1; }
-.ui-copy-written { font-family:'Georgia',serif; font-size:11px; color:#3182F6; flex:1; }
-
-/* ════════════════════════════
-   화면 예시 카드 — 영작훈련 모형
-════════════════════════════ */
-.ui-trans-table { width:100%; border-collapse:collapse; background:#fff; border-radius:8px; overflow:hidden; border:1px solid #E5E8EB; }
-.ui-trans-table th { font-size:10px; font-weight:800; padding:5px 8px; text-align:left; }
-.ui-trans-table th:first-child { background:#FFF4E6; color:#E07B00; }
-.ui-trans-table th:last-child  { background:#EEF4FF; color:#3182F6; }
-.ui-trans-table td { padding:5px 8px; font-size:11px; border-top:1px solid #F2F4F6; }
-.ui-trans-table td:last-child { font-family:'Georgia',serif; color:#3182F6; }
-
-/* ════════════════════════════
-   화면 예시 카드 — 학습 현황 모형
-════════════════════════════ */
-.ui-mock--learning { padding: 16px 20px; }
-.ui-learn-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 8px; }
-.ui-learn-col { border: 1px solid #3182F6; border-radius: 12px; overflow: hidden; padding-bottom: 12px; background: #F0F6FF; }
-.ui-learn-col-header {
-  display: block; margin: 12px 10px 10px; padding: 5px 0;
-  text-align: center; font-size: 12px; font-weight: 800;
-  color: #fff; letter-spacing: -0.01em;
-  border: 1.5px solid #3182F6; background: #3182F6; border-radius: 999px;
-}
-.ui-learn-list { list-style: none; margin: 0; padding: 0 6px; }
-.ui-learn-list li { font-size: 12px; color: #3182F6; line-height: 2; font-weight: 600; text-align: center; word-break: keep-all; }
 
 /* ════════════════════════════
    자주 묻는 질문 (FAQ)
@@ -871,6 +832,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   }
   .hero-content { flex-direction: column; padding: 0; gap: 18px; margin: 0 auto; }
   .hero-text { text-align: center; order: 0; padding-right: 0; }
+  /* 마스코트 위치 — 768px */
   .hero-mascot-left,
   .hero-mascot-right {
     display: block;
@@ -955,8 +917,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   }
   .hero-content,
   .hero-text,
-  .hero-cta-row,
-  .stats-wrapper {
+  .hero-cta-row {
     width: 100%;
     max-width: calc(100vw - 36px);
   }
@@ -969,6 +930,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
       linear-gradient(180deg, rgba(255,255,255,0.64) 0%, rgba(255,255,255,0.42) 48%, rgba(255,255,255,0.12) 76%, rgba(255,255,255,0) 100%),
       radial-gradient(ellipse 104% 34% at 50% 20%, rgba(255,255,255,0.86) 0%, rgba(255,255,255,0.5) 58%, transparent 80%);
   }
+  /* 마스코트 위치 — 480px */
   .hero-mascot-left,
   .hero-mascot-right {
     top: auto;
@@ -1014,10 +976,6 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   .modal-subtitle { font-size: 17px; }
   .form-input, .form-input::placeholder { font-size: 16px; }
   .payment-check-list li { font-size: 17px; }
-  .ui-mock--learning { padding: 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .ui-learn-cols { grid-template-columns: repeat(3, 110px); gap: 8px; width: max-content; min-width: 100%; }
-  .ui-learn-col-header { font-size: 11px; margin: 8px 6px; padding: 5px 2px; white-space: nowrap; }
-  .ui-learn-list li { font-size: 11px; line-height: 1.8; }
 }
 
 @media (max-width: 380px) {
@@ -1036,6 +994,7 @@ input[type="checkbox"] { accent-color: var(--brand-blue); cursor: pointer; width
   .hero-mascot-right {
     width: clamp(94px, 29vw, 108px);
   }
+  /* 마스코트 위치 — 380px */
   .hero-mascot-left  { left: calc(50% - 136px); }
   .hero-mascot-right { right: calc(50% - 136px); }
   .stats-wrapper { font-size: 11px; }
@@ -1628,6 +1587,9 @@ function openModal() {
 openModalBtn.onclick = openModal;
 if (heroCtaBtn) heroCtaBtn.onclick = openModal;
 closeModalBtn.onclick = () => { modalOverlay.classList.remove('active'); document.body.style.overflow = ''; };
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) { modalOverlay.classList.remove('active'); document.body.style.overflow = ''; }
+});
 
 /* ══ 휴대폰 인증 — 변수 선언 ══ */
 const phoneInput     = document.getElementById('phoneInput');
@@ -1790,7 +1752,6 @@ form.addEventListener('submit', (e) => {
   if (!phoneVerified) {
     verifyStatus.className = 'verify-status error';
     verifyStatus.textContent = '휴대폰 번호 인증을 완료해주세요.';
-    verifyStatus.style.display = 'block';
     phoneInput.classList.add('input-error');
     setTimeout(() => phoneInput.classList.remove('input-error'), 400);
     return;
